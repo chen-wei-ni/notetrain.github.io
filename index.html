@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,  initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="slick/slick.css">
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+		<link rel="stylesheet" type="text/css" href="css/whole.css">
+		<link rel="stylesheet" href="dist/aos.css">
+		<title>Note.Train</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			  $('.menu-over').click(function(){
+				$('.overlay').toggleClass("transition-1");
+			  });
+			  $(window).scroll(function(){
+    
+        /* Check the location of each desired element */
+        $('.hideme').each( function(i){   
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},200,'linear',0);
+                $(this).animate({'top':'0'},200,'linear',0);   
+            }            
+        }); 
+		});
+		$('div.more').hide();
+		$('div.more-btn a').click(function() {
+			$('div.more').fadeIn();
+			$(this).hide();
+		});
+    
+    });
+
+		</script>
+	</head>
+	<body>
+		<header>
+			<div class="bar-link">
+				<h1>
+					Note.Train
+				</h1>
+				<div class="links">
+					<p><a href="">Easy</a></p>
+					<p><a href="">Moderate</a></p>
+					<p><a href="">Hard</a></p>
+					<p><a href="">Extreme</a></p>
+				</div>
+				<div class="right-bar">
+					<ul class="sns">
+						<li><a href=""><img src="img/instagram.svg"></a></li>
+						<li><a href=""><img src="img/FACEBOOK風のアイコン素材.svg"></a></li>
+						<li><a href=""><img src="img/twitterのアイコン素材 その2.svg"></a></li>
+					</ul>
+				</div>
+				<input type="checkbox" id="active">
+				<label for="active" class="menu-over" onclick="myFunction(this)">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</label>
+				<!--overlay-->
+				 <div id="myNav" class="overlay">
+					<div class="content">
+						<p><a href="">HTML</a></p>
+						<p><a href="">CSS</a></p>
+						<p><a href="">jquery</a></p>
+						<p><a href="">javascript</a></p>						
+					</div>
+				 </div>
+			</div>
+		</header>
+		<div class="BN">
+			<div class="bg-after"><img src="img/BN-1.jpg"></div>
+			<div class="bg-before"><img src="img/charles-forerunner-3fPXt37X6UQ-unsplash.jpg"></div>
+		</div>
+		<div class="autoplay slider myslider" style="display">
+			<button class="slick-prev slick-arrow"></button>
+			<div class="slides">
+				<div class="slide-content">
+					<a href="https://www.w3schools.com/howto/howto_js_image_magnifier_glass.asp" target="_blank"> 
+						<div class="bg-slide">
+							<img src="img/ws-school-01.jpg">
+						</div>
+						<div class="docs">
+							<p>W3s school</p>
+							<p>For buliding & styling web pages<br>從html到JAVA都有詳細說明(附有範例) </p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="slides">
+				<div class="slide-content">
+					<a href="https://www.oxxostudio.tw/articles/201803/css-animation.html" target="_blank"> 
+						<div class="bg-slide">
+							<img src="img/oxxo.jpg">
+						</div>
+						<div class="docs">
+							<p>oxxo</p>
+							<p>對於前端相關效果互動的呈現分享,完全沒用任何套件,收益良多!</p>
+						</div>
+					</a>
+				</div>	
+			</div>
+			<div class="slides">
+				<div class="slide-content">
+					<a href="https://www.kevinpowell.co" target="_blank"> 
+						<div class="bg-slide">
+							<img src="img/kevin.jpg">
+						</div>
+						<div class="docs">
+							<p>Kevinpowell</p>
+							<p>" Teach people how to make the web look good while they're at it. "<br>會在yt上,手把手教學,可以非常清楚了解coding過程</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="slides">
+				<div class="slide-content">
+					<a href="https://web.dev/centering-in-css/?fbclid=IwAR3q7bSETmNKEIixeQbXXBCUz8kOaPJ-r-8OGOvIppRByZ_lkUmY1cjTCew" target="_blank"> 
+						<div class="bg-slide">
+							<img src="img/web-dev.jpg">
+						</div>
+						<div class="docs">
+							<p>web.dev</p>
+							<p>Where you can learn and measure<br>從網頁的架設到網頁資安等,涵蓋層面之大,可以在上面學習到不少寶</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="slides">
+				<div class="slide-content">
+					<a href="https://tympanus.net/Development/ButtonHoverStyles/" target="_blank"> 
+						<div class="bg-slide">
+							<img src="img/button.jpg">
+						</div>
+						<div class="docs">
+							<p>CSS Button.HOVER</p>
+							<p>囊括許多按鈕hover樣式</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		 
+		<section id="black-part">
+			<p class="css">CSS</p>
+			<p class="css-t">strengthen ability</p>
+			<div class="css-part hideme">
+				<div class="css-part-t">
+					<h6><strong>Essential</strong></h6>
+					<p>Transform-function</p>
+				</div>
+					<p>Represents a transformation that affects an element's appearance.<br>
+					Transformation functions can rotate, resize, distort, or move an element in 2D or 3D space.</p>
+			</div>
+			<div class="animate-part hideme" ><!--data-aos="fade-up"-->
+				<div class="css-part-t animate-t">
+					<h6><strong>Imprtan</strong></h6>
+					<p>Animation</p>
+				</div>
+				<div class="animate-content">
+					<span>Animation(name/duration/delay/timing-function)</span>
+					<span>animation-name：動畫名稱(可以自行取名)</span>
+					<span>animation-delay：延遲多久播放動畫，單位為s或ms</span>
+					<span>animation-timing-function：動畫播放的速度曲線</span>
+				</div>
+			</div>
+			<div class="animate-part hideme">				
+				<div class="css-part-t animate-t trans3d">
+					<h6><strong>Imprtant</strong></h6>
+					<p>Translate3d</p>
+				</div>
+				<div  class="animate-content">
+					<span>translate3d(tx, ty, tz)</span>
+					<span>tx:其 <length> 代表平移向量的橫坐標</span>
+					<span>ty:其 <length> 代表平移向量的縱坐標</span>
+					<span>tz:其 <length> 代表平移向量的 z 分量,不能百分比</span>
+					<span>transform: translate3d(42px, -62px, -135px);</span>
+				</div>
+			</div>
+		 </section>
+		 <section id="info-news">
+			<p class="tital">INFORMATION</p>
+			<div class="content">
+				<div class="info-box hideme">
+					<a href="https://design.webclips.jp/japanese-free-font-vol01/" target="_blank">
+						<p>2021.06.02</p>
+						<p>【無料】漢字が使える日本語フリーフォント70選</p>
+					</a>
+				</div>
+				<div class="info-box hideme">
+					<a href="https://n10shop.com/post-76733/" target="_blank">
+						<p>2021.06.01</p>
+						<p>【無料】イラスト素材まとめ【商用ＯＫ】</p>
+					</a>
+				</div>
+				<div class="info-box hideme">
+					<a href="https://codertw.com/前端開發/262907/" target="_blank">
+						<p>2021.05.25</p>
+						<p>淺談DOCTYPE對$(window).height()取值的影響!</p>
+					</a>
+				</div>
+				<div class="info-box hideme more">
+					<a href="https://jsfiddle.net/tcloninger/e5qaD/" target="_blank">
+						<p>2021.05.25</p>
+						<p>FadeIn on Scroll(jQuery)</p>
+					</a>
+				</div>
+				<div class="info-box hideme more">
+					<a href="https://teratail.com/questions/211127" target="_blank">
+						<p>2021.05.25</p>
+						<p>datepickerの年と月が逆転してしまう</p>
+					</a>
+				</div>
+			</div>
+			<div class="more-btn">
+				<a class="pointer">MORE <span class="icon-plus"></span></a>
+			</div>
+		 </section>
+		<section class="bottom">
+			<p>NINI,.LTD ALL RIGHTS RESERVED.</p>
+		</section>
+		 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+		  <script src="slick/slick.js" type="text/javascript" charset="utf-8"></script>
+		  <script src="slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
+		  <script src="dist/aos.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		  <script type="text/javascript">			
+		   $(document).on('ready', function() {
+		   $('.autoplay').slick({
+			  slidesToShow: 3,
+			  slidesToScroll: 1,
+			  autoplay: true,
+			  autoplaySpeed: 3000,
+			  dots: true,
+			  arrows:true,
+			  prevArrow:'<button type="button" class="slick-prev"></button>',
+			  nextArrow:'<button type="button" class="slick-next"></button>',
+			});			
+			});
+		</script>
+		<script>
+			function myFunction(x) {
+			  x.classList.toggle("change");
+			}
+			AOS.init({
+			easing: 'ease-in-out-sine'
+			}); 
+		</script>
+	</body>
+</html>
