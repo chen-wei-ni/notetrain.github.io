@@ -6,6 +6,8 @@
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
 		<link rel="stylesheet" type="text/css" href="css/whole.css">
+		<link rel="stylesheet" type="text/css" href="css/whole-pc.css" media="screen and (min-width:601px)">
+		<link rel="stylesheet" type="text/css" href="css/whole-mb.css" media="screen and (max-width:600px)">
 		<link rel="stylesheet" href="dist/aos.css">
 		<title>Note.Train</title>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -13,6 +15,7 @@
 			$(document).ready(function(){
 			  $('.menu-over').click(function(){
 				$('.overlay').toggleClass("transition-1");
+				$('html').toggleClass("whole");
 			  });
 			  $(window).scroll(function(){
     
@@ -40,6 +43,16 @@
 		</script>
 	</head>
 	<body>
+		<input type="checkbox" id="active">
+	<!--overlay-->
+		 <div id="myNav" class="overlay">
+			<div class="content">
+				<p><a href="">HTML</a></p>
+				<p><a href="">CSS</a></p>
+				<p><a href="">jquery</a></p>
+				<p><a href="">javascript</a></p>						
+			</div>
+		 </div>
 		<header>
 			<div class="bar-link">
 				<h1>
@@ -58,26 +71,18 @@
 						<li><a href=""><img src="img/twitterのアイコン素材 その2.svg"></a></li>
 					</ul>
 				</div>
-				<input type="checkbox" id="active">
 				<label for="active" class="menu-over" onclick="myFunction(this)">
 					<div class="bar1"></div>
 					<div class="bar2"></div>
 					<div class="bar3"></div>
 				</label>
-				<!--overlay-->
-				 <div id="myNav" class="overlay">
-					<div class="content">
-						<p><a href="">HTML</a></p>
-						<p><a href="">CSS</a></p>
-						<p><a href="">jquery</a></p>
-						<p><a href="">javascript</a></p>						
-					</div>
-				 </div>
 			</div>
 		</header>
 		<div class="BN">
 			<div class="bg-after"><img src="img/BN-1.jpg"></div>
 			<div class="bg-before"><img src="img/charles-forerunner-3fPXt37X6UQ-unsplash.jpg"></div>
+			<div class="mb-1"><img src="img/MB-1.jpg"></div>
+			<div class="mb-2"><img src="img/MB-2.jpg"></div>
 		</div>
 		<div class="autoplay slider myslider" style="display">
 			<button class="slick-prev slick-arrow"></button>
@@ -147,7 +152,74 @@
 				</div>
 			</div>
 		</div>
-		 
+		 <div class="autoplay slider mbslider" style="display">
+			<button class="slick-prev slick-arrow"></button>
+			<div class="slides">
+				<div class="slide-content">
+					<a href="https://www.w3schools.com/howto/howto_js_image_magnifier_glass.asp" target="_blank"> 
+						<div class="bg-slide">
+							<img src="img/ws-school-01.jpg">
+						</div>
+						<div class="docs">
+							<p>W3s school</p>
+							<p>For buliding & styling web pages<br>從html到JAVA都有詳細說明(附有範例) </p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="slides">
+				<div class="slide-content">
+					<a href="https://www.oxxostudio.tw/articles/201803/css-animation.html" target="_blank"> 
+						<div class="bg-slide">
+							<img src="img/oxxo.jpg">
+						</div>
+						<div class="docs">
+							<p>oxxo</p>
+							<p>對於前端相關效果互動的呈現分享,完全沒用任何套件,收益良多!</p>
+						</div>
+					</a>
+				</div>	
+			</div>
+			<div class="slides">
+				<div class="slide-content">
+					<a href="https://www.kevinpowell.co" target="_blank"> 
+						<div class="bg-slide">
+							<img src="img/kevin.jpg">
+						</div>
+						<div class="docs">
+							<p>Kevinpowell</p>
+							<p>" Teach people how to make the web look good while they're at it. "<br>會在yt上,手把手教學,可以非常清楚了解coding過程</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="slides">
+				<div class="slide-content">
+					<a href="https://web.dev/centering-in-css/?fbclid=IwAR3q7bSETmNKEIixeQbXXBCUz8kOaPJ-r-8OGOvIppRByZ_lkUmY1cjTCew" target="_blank"> 
+						<div class="bg-slide">
+							<img src="img/web-dev.jpg">
+						</div>
+						<div class="docs">
+							<p>web.dev</p>
+							<p>Where you can learn and measure<br>從網頁的架設到網頁資安等,涵蓋層面之大,可以在上面學習到不少寶</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="slides">
+				<div class="slide-content">
+					<a href="https://tympanus.net/Development/ButtonHoverStyles/" target="_blank"> 
+						<div class="bg-slide">
+							<img src="img/button.jpg">
+						</div>
+						<div class="docs">
+							<p>CSS Button.HOVER</p>
+							<p>囊括許多按鈕hover樣式</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
 		<section id="black-part">
 			<p class="css">CSS</p>
 			<p class="css-t">strengthen ability</p>
@@ -233,7 +305,7 @@
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		  <script type="text/javascript">			
 		   $(document).on('ready', function() {
-		   $('.autoplay').slick({
+		   $('.myslider').slick({
 			  slidesToShow: 3,
 			  slidesToScroll: 1,
 			  autoplay: true,
@@ -242,16 +314,24 @@
 			  arrows:true,
 			  prevArrow:'<button type="button" class="slick-prev"></button>',
 			  nextArrow:'<button type="button" class="slick-next"></button>',
-			});			
+			});	
+			$('.mbslider').slick({
+			  slidesToShow: 1,
+			  slidesToScroll: 1,
+			  autoplay: true,
+			  autoplaySpeed: 5000,
+			  dots: true,
+			  arrows:true,
+			  prevArrow:'<button type="button" class="slick-prev"></button>',
+			  nextArrow:'<button type="button" class="slick-next"></button>',
+			});	
 			});
 		</script>
 		<script>
 			function myFunction(x) {
 			  x.classList.toggle("change");
 			}
-			AOS.init({
-			easing: 'ease-in-out-sine'
-			}); 
 		</script>
 	</body>
+
 </html>
