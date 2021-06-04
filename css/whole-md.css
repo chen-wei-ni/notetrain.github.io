@@ -23,7 +23,9 @@
 	.links p a {
 		color:#fff;
 		display:block;
-		padding:10px 0;
+		padding:20px 0;
+		font-size:1.2rem;
+		font-weight:bold;
 	}
 /*BN圖*/
 .BN {
@@ -138,19 +140,20 @@
 	}
 	.mbslider {
 		position:relative;
-		top:-50px;
+		top:-80px;
 	}
 	.slides .slide-content a:before {
 		content:'Learn It!';
 		background:linear-gradient(60deg,#593466,#e92f98,#4c4ae0);
 		position:absolute;
-		width:80px;
-		height:30px;
+		width:120px;
+		height:50px;
 		z-index:2;
 		color:#fff;
 		font-weight:600;
+		font-size:1.3rem;
 		text-align:center;
-		padding:5px 0 0 0;
+		padding:18px 0 0 0;
 	}
 	.slides .slide-content:after {
 		content:'';
@@ -164,23 +167,25 @@
 		border-color:  transparent transparent #dc2f94;
 	}
 	.mbslider .slides {
-		background-color:transparent;		
+		background-color:transparent;
+		
 	}
 	.slides .slide-content .docs {
 		padding:10px 15px;
+		
 	}
 	.slides .slide-content .docs p:nth-of-type(1) {
 		font-family: source-han-sans-traditional, sans-serif;
 		font-weight: 900;
 		font-style: normal;
-		font-size:1.1rem;
+		font-size:1.4rem;
 		margin: 0 0 10px 0;
 	}
 	.slides .slide-content .docs p:nth-of-type(2) {
 		font-family: sans-serif, source-han-sans-traditional;
 		font-weight: 400;
 		font-style: normal;
-		font-size:0.9rem;
+		font-size:1.1rem;
 		margin:5px 0 0 0;
 	}
 	.slides .slide-content{
@@ -197,6 +202,7 @@
 	}
 	.slides .slide-content .bg-slide img {
 		max-width:100%;
+		margin: 0 auto;
 	}
 	.slick-list {
 		padding: 0 30px;
@@ -234,14 +240,14 @@
 		font-family:source-han-sans-traditional;
 	}
 	.css-part-t p {
-		font-size:1.1rem;
+		font-size:1.2rem;
 		font-weight:800;
 	}
 	.css-part-t h6 strong{
 		background-image:radial-gradient(circle farthest-corner at left,#593466,#e92f98,#4c4ae0);		
 		color:#161313;
 		font-family:roboto-B;
-		font-size:1.2rem;
+		font-size:1.3rem;
 		font-weight:bolder;
 		padding: 5px 10px;
 	}

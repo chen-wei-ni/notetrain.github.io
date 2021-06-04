@@ -1,4 +1,7 @@
-﻿
+﻿body {
+	margin:0;
+	max-width:1400%;
+}
 header {
 	background-color:#fff;
 	box-shadow: 0 0 10px rgb(0 0 0 / 10%);	
@@ -244,7 +247,9 @@ header {
 		display:block;
 		height:360px;
 	}
-
+	.slick-prev,.slick-next {
+		display:none !important;
+	}
 	.myslider .slides {
 		background-color:transparent;		
 	}
